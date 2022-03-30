@@ -14,7 +14,7 @@ def create(request):
     long_url = request.form['url']
     
     if not validators.url(long_url):
-        return render_template('home.html', error='Invalid URL.')
+        return render_template('home.html', error='Invalid URL.', title='Make a short URL!')
 
     url = URL.find_by_long(long_url)
     if not url:
