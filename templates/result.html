@@ -3,15 +3,23 @@
 {% block content %}
 
 <div class = "new_url">
-    <tr>
-        <td> <div id = "new_url" >{{short_url}}</div>
-            <button id = "copy_link">Copy Link</button>
-            <button id = "load_page" >Load Page</button>
-        </td>
-        <td id = "old_url"> {{long_url}}</td>
-        <td> <button onclick="location.href = '/';" id = "home" >Home</button></td>
-    </tr>
+    <table>
+        <tr>
+            <th>New URL</th>
+            <td> <div id = "new_url" value=" {{short_url}}" >{{short_url}}</div></td>
+        </tr>
+        <tr>
+            <th>Old URL</th>
+            <td><div id = "old_url"> {{long_url}} </div></td></td>
+        </tr>
+</table>
+<div> 
+    <button onclick="location.href = '/';" id = "home" >Home</button>
+    <button onclick = "myFunction" id = "copy_link">Copy Link</button>
+    <button onclick = "location.href = '{{long_url}}'" id = "load_page" >Load Page</button>
+    
 
+</div>
 
 </div>
 {% endblock %}
