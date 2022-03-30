@@ -1,8 +1,10 @@
 from pymongo import MongoClient
+from dotenv import dotenv_values
+
+config = dotenv_values('.env')
 
 def init():
-  CONN_STRING = "mongodb+srv://hamza:King2030@cluster0.zyax5.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
-  client = MongoClient(CONN_STRING)
+  client = MongoClient(config['CONN_STRING'])
   return client
 
 if __name__ == "__main__":

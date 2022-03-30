@@ -8,6 +8,7 @@ flask = "*"
 flask-cors = "*"
 pymongo = {extras = ["srv"], version = "*"}
 validators = "*"
+python-dotenv = "*"
 
 [dev-packages]
 pytest = "*"
