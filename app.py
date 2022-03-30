@@ -2,11 +2,8 @@ from flask import Flask, render_template, request
 from werkzeug import exceptions
 
 from controllers import urls
-from db_config import get_collection
 
 app = Flask(__name__)
-
-urls = []
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
