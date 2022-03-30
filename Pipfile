@@ -6,7 +6,7 @@ name = "pypi"
 [packages]
 flask = "*"
 flask-cors = "*"
-pymongo = "*"
+pymongo = {extras = ["srv"], version = "*"}
 validators = "*"
 
 [dev-packages]

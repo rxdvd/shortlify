@@ -1,5 +1,7 @@
 import random
 
+from db_config import init
+
 class URL():
     all = []
 
@@ -27,7 +29,10 @@ class URL():
     @classmethod
     def create(cls, long):
         short = cls.generate_short()
-        url = cls({ 'long': long, 'short': short })
+        url_data = { 'long': long, 'short': short }
+        with init() as client:
+            client.shortlify.url_data.insert_one(url_data)
+        url = cls(url_data)
         return url
     
     @classmethod
@@ -40,3 +45,13 @@ class URL():
             short_url = ''.join([random.choice(possible_chars) for _ in range(5)])
         
         return short_url
+    
+    @classmethod
+    def load_from_db(cls):
+        cls.all = []
+        with init() as client:
+            urls = list(client.shortlify.url_data.find())
+            for url in urls:
+                cls(url)
+
+URL.load_from_db()

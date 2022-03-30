@@ -1,13 +1,10 @@
-def get_collection():
-  import pymongo
-  from pymongo import MongoClient
+from pymongo import MongoClient
 
+def init():
   CONN_STRING = "mongodb+srv://hamza:King2030@cluster0.zyax5.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
-
   client = MongoClient(CONN_STRING)
-
-  return client["url_data"]
+  return client
 
 if __name__ == "__main__":
-  import json
-  collection = get_collection()
+  client = init()
+  print(list(client.shortlify.url_data.find()))

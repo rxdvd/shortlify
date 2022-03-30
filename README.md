@@ -56,5 +56,6 @@ URL shortening website made as part of a paired code challenge.
 - [x] Redirect controller recurses infinitely.
 - [x] Error pages don't render.
 - [x] Error pages don't return the correct status code.
+- [x] Can't access database.
 
 ## Wins & Challenges

@@ -1,10 +1,8 @@
 from flask import render_template, redirect
-from werkzeug.exceptions import BadRequest
+from werkzeug.exceptions import InternalServerError
 import validators
 
 from models.URL import URL
-
-urls = []
 
 def index():
     return render_template('home.html', title='Make a short URL!')
@@ -19,7 +17,10 @@ def create(request):
     url = URL.find_by_long(long_url)
     if not url:
         status_code = 201
-        url = URL.create(long_url)
+        try:
+            url = URL.create(long_url)
+        except:
+            raise InternalServerError('Could not create short URL.')
 
     return render_template(
         'result.html', 
