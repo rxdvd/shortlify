@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class = "new_url">
+    <tr>
+        <td> <div id = "new_url" >{{short_url}}</div>
+            <button id = "copy_link">Copy Link</button>
+            <button id = "load_page" >Load Page</button>
+        </td>
+        <td id = "old_url">{{long_url}}</td>
+        <td> <button id = "home" >Home</button></td>
+    </tr>
+
+
+</div>
+{% endblock %}
