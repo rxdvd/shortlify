@@ -59,3 +59,7 @@ URL shortening website made as part of a paired code challenge.
 - [x] Can't access database.
 
 ## Wins & Challenges
+
+* Ran into a bug where the redirect function in the controller was calling itself repeatedly up to the max recursion depth. It turns out that because the controller function and the imported function from flask had the same name, it was calling itself instead of the redirect method from flask causing it to loop infinitely. This was fixed by renaming the function from `redirect` to `redirect_to`.
+* The database could not be connected to at first because the network access wasn't configured properly on Mongo Atlas. Also, trying to query a collection that didn't yet exist resulted in the `pymongo` client freezing.
+* Managed to implement a MVC design pattern in Python for the first time without running into any problems.
