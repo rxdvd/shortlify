@@ -30,5 +30,13 @@ def home():
     else:
         return render_template('home.html', title='Make a short URL!')
 
+@app.route('/<string:id>')
+def redirect_to(id):
+    long_url = next((url['long'] for url in urls if url['short'] == id), None)
+    if long_url:
+        return redirect(long_url)
+    else:
+        return redirect('/')
+
 if __name__ == '__main__':
     app.run()
