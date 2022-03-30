@@ -50,6 +50,7 @@ URL shortening website made as part of a paired code challenge.
 * Created a model for the URLs with a property for the original URL and for the shortened one `models/URL.py`.
 * Added validation to make sure the URL submitted is of the right format.
 * Changed behaviour for submitting an invalid URL to return to home rather than show an error page.
+* Add error message to homepage when redirected back due to an error.
 
 ## Bugs/Issues
 

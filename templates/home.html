@@ -1,15 +1,17 @@
 {% extends "base.html" %}
+
 {% block title %}{{title}}{% endblock %}
+
 {% block content %}
 <div class = "main">
     <h1>Shortlify</h1>
     <form action = "/" method = "POST">
         <input type = "text" name = "url">
         <input type = "submit" value = "Shorten url">
-        
     </form>
-    {% endblock content %}
-
-
     
+    {% if error %}
+    <div id="error">{{error}}</div>
+    {% endif %}
 </div>
+{% endblock content %}
