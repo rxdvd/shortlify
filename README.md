@@ -46,6 +46,15 @@ URL shortening website made as part of a paired code challenge.
 
 ## Changelog
 
+* Factored out controller logic into separate file `controllers/urls.py`.
+* Created a model for the URLs with a property for the original URL and for the shortened one `models/URL.py`.
+* Added validation to make sure the URL submitted is of the right format.
+* Changed behaviour for submitting an invalid URL to return to home rather than show an error page.
+
 ## Bugs/Issues
+
+- [x] Redirect controller recurses infinitely.
+- [x] Error pages don't render.
+- [x] Error pages don't return the correct status code.
 
 ## Wins & Challenges
