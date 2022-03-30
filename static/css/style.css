@@ -33,3 +33,11 @@ th,td{
     border:1px solid black;
     padding-right: 50px;
 }
+
+footer{
+    text-align: right;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    font-size: medium;
+}

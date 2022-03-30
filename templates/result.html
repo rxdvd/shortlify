@@ -6,7 +6,7 @@
     <table>
         <tr>
             <th>New URL</th>
-            <td> <div id = "new_url" value=" {{short_url}}" >{{short_url}}</div></td>
+            <td> <a id="new_url" href="/{{short_url}}">{{short_url}}</a></td>
         </tr>
         <tr>
             <th>Old URL</th>
@@ -15,8 +15,7 @@
 </table>
 <div> 
     <button onclick="location.href = '/';" id = "home" >Home</button>
-    <button onclick = "myFunction" id = "copy_link">Copy Link</button>
-    <button onclick = "location.href = '{{long_url}}'" id = "load_page" >Load Page</button>
+    <button onclick = "myFunction()" id = "copy_link">Copy Link</button>
     
 
 </div>
