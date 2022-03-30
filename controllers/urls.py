@@ -1,4 +1,6 @@
 from flask import render_template, redirect
+from werkzeug.exceptions import BadRequest
+import validators
 
 from models.URL import URL
 
@@ -10,7 +12,10 @@ def index():
 def create(request):
     status_code = 200
     long_url = request.form['url']
-    # to-do: make sure url is the right format
+    
+    if not validators.url(long_url):
+        raise BadRequest('Invalid URL.')
+
     url = URL.find_by_long(long_url)
     if not url:
         status_code = 201

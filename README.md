@@ -48,6 +48,7 @@ URL shortening website made as part of a paired code challenge.
 
 * Factored out controller logic into separate file `controllers/urls.py`.
 * Created a model for the URLs with a property for the original URL and for the shortened one `models/URL.py`.
+* Added validation to make sure the URL submitted is of the right format.
 
 ## Bugs/Issues
 
