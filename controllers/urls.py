@@ -16,7 +16,7 @@ def create(request):
         url = URL.create(long_url)
 
     return render_template(
-        'result.html', 
+        'newurl.html', 
         long_url=url.long, 
         short_url=url.short, 
         title='Your shortened URL'
