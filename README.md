@@ -38,11 +38,11 @@ URL shortening website made as part of a paired code challenge.
 
 ### Routes
 
-| Route              | Description |
-| ------------------ | ----------- |
-| `GET /`            | Shows homepage where user can submit URLs that they want shortened. |
-| `POST /`           | Receives a full URL in the request body and then shows a page where the user can see the shortened URL. |
-| `GET /<string:id>` | Redirects the user to the corresponding URL or the homepage if it doesn't exist. |
+| Route          | Method | Description |
+| -------------- | ------ | ----------- |
+| `/`            | `GET`  | Shows homepage where user can submit URLs that they want shortened. |
+| `/`            | `POST` | Receives a full URL in the request body and then shows a page where the user can see the shortened URL. |
+| `/<string:id>` | `GET`  | Redirects the user to the corresponding URL or the homepage if it doesn't exist. |
 
 ## Changelog
 
