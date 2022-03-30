@@ -51,4 +51,6 @@ URL shortening website made as part of a paired code challenge.
 
 ## Bugs/Issues
 
+- [x] Redirect controller recurses infinitely.
+
 ## Wins & Challenges

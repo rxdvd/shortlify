@@ -10,6 +10,7 @@ def index():
 def create(request):
     status_code = 200
     long_url = request.form['url']
+    # to-do: make sure url is the right format
     url = URL.find_by_long(long_url)
     if not url:
         status_code = 201
@@ -22,7 +23,7 @@ def create(request):
         title='Your shortened URL'
     ), status_code
 
-def redirect(id):
+def redirect_to(id):
     url = URL.find_by_short(id)
     if url:
         return redirect(url.long)

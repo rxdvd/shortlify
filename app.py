@@ -14,7 +14,7 @@ def home():
 
 @app.route('/<string:id>')
 def redirect_to(id):
-    return urls.redirect(id)
+    return urls.redirect_to(id)
 
 @app.errorhandler(exceptions.BadRequest)
 def handle_400(err):
