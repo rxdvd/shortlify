@@ -55,4 +55,4 @@ def handle_500(err):
     return render_template('error.html', error=err, code=500, title='Internal Server Error')
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
