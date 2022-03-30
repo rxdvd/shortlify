@@ -1,0 +1,21 @@
+body, html {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: lightblue;
+}
+div{
+    justify-content: center;
+    margin: auto;
+    width: 400px;
+    height: 400px;
+    text-align: center;
+    padding: 300px ;
+    font-size: xx-large;
+
+
+}
+input{
+    font-size: x-large;
+}
+
+
