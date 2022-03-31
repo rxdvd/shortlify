@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}{{title}}{% endblock %}
+{% block content %}
+
+<div class = "new_url">
+    <table>
+        <tr>
+            <th>New URL</th>
+            <td> <a id="new_url" href="/{{short_url}}">{{short_url}}</a></td>
+        </tr>
+        <tr>
+            <th>Old URL</th>
+            <td><div id = "old_url"> {{long_url}} </div></td></td>
+        </tr>
+</table>
+<div> 
+    <button onclick="location.href = '/';" id = "home" >Home</button>
+    <button onclick = "myFunction()" id = "copy_link">Copy Link</button>
+    
+
+</div>
+
+</div>
+{% endblock %}
